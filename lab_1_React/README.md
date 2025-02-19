@@ -1,8 +1,29 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Ответы на контрольные вопросы:
 
-Currently, two official plugins are available:
+1. **Что такое JSX и зачем он используется в React?** <br>
+Это формат в React который позволяет писать HTML код в связке с JS, и выводить какие то значения. В нем синтаксис выглядит как JS код, но в HTML развертке.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. **Чем функциональные компоненты отличаются от классовых?**<br>
+Разница в том, что в функционалыных компонентах можно изменять значения, например цену, названия продукта, а классовые имеют какие-то методы, и жизненный цикл.
+
+3. **Как передавать данные в компонент через props?** <br>
+Для того что-б передать данные, мы можем использовать дестуктуризацию
+
+```JS
+function foo([title, name]) {
+    // some code
+}
+```
+Затем в нужной нам компоненте в нашем тэге как в значении мы будем передавать это
+
+```HTML
+<foo title="test" name="eee">
+```
+
+И потом сделать экспорт в наш app.jsx, то мы увидим, что наш react это отрендерил
+
+4. **В каком формате принимаются props в функциональном компоненте?**<br />
+
+Пропс могут принимать в себя любой формат. Как объект или же как какие то типы данных, а еще могут быть функцией
