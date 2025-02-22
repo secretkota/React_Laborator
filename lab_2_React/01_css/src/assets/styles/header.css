@@ -1,0 +1,40 @@
+.header{
+    background-color: #5b5b5b;
+    height: 7vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.header__logo{
+    font-size: 20px;
+}
+
+.header__nav-list{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+.header__nav-list a {
+    display: inline-block;
+    margin-right: 3px;
+}
+
+.header__nav-list a button {
+    border-radius: 5px;
+    text-align: center;
+    padding: 4px 8px;
+    background-color: #4676D7;
+    color: white;
+    font-size: 16px;
+}
+
+.header__nav-list a button:hover {
+    background-color: rgb(49, 85, 157);
+    box-shadow: 0 0 0 2px #cbd6ee;
+}
