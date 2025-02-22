@@ -103,3 +103,9 @@ body{
 }
 
 
+.main_article {
+    height: 500px;
+    width: 500px;
+    background-color: blueviolet;
+    margin: 0 auto;
+}
