@@ -29,12 +29,12 @@
     border-radius: 5px;
     text-align: center;
     padding: 4px 8px;
-    background-color: #4676D7;
+    background-color: #2e3239;
     color: white;
     font-size: 16px;
 }
 
 .header__nav-list a button:hover {
-    background-color: rgb(49, 85, 157);
+    background-color: rgb(10, 18, 34);
     box-shadow: 0 0 0 2px #cbd6ee;
 }

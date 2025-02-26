@@ -4,9 +4,9 @@ export default function Header() {
             <div className="header__logo">Logo</div>
                 <nav className="header__nav">
                     <ul className="header__nav-list">
-                        <li className="header__nav-item">Main</li>
-                        <li className="header__nav-item">About</li>
-                        <li className="header__nav-item">Login</li>
+                        <a href=""><button>Main</button></a>
+                        <a href=""><button>About</button></a>
+                        <a href=""><button>Login</button></a>
                     </ul>
                 </nav>
         </header>

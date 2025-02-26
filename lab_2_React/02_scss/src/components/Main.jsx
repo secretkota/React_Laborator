@@ -1,7 +1,11 @@
-export default function Main() {
+export default function Main(){
     return(
         <>
-            <p>Lorem ipsum dolor sit amet.</p>
+            <main className="main">
+                <div className="main__photo">
+                    <p className='main__photo_text'>Radio Test</p>
+                </div>
+            </main>
         </>
     )
 }
