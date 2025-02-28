@@ -1,10 +1,13 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './assets/styles/normalizate.css'
 import App from './App.jsx'
+import { Theme } from "@radix-ui/themes";
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <Theme>
+        <App />
+    </Theme>
   </StrictMode>,
 )
