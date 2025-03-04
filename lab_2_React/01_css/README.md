@@ -1,8 +1,70 @@
-# React + Vite
+# Версия с использованием CSS-файлов
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Использованный метод и его основные особенности
 
-Currently, two official plugins are available:
+В данном проекте используется метод стилизации с помощью отдельных CSS-файлов. Основные особенности данного метода:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Стили хранятся в отдельных `.css` файлах, что облегчает организацию кода.
+- Возможность повторного использования стилей в разных компонентах.
+- Простота подключения стилей с помощью `import './styles.css'` внутри компонентов.
+- Отсутствие необходимости в дополнительных инструментов, таких как CSS-in-JS или препроцессоры.
+- Возможность использования глобальных и локальных стилей.
+
+# Инструкция: Запуск Проекта
+**1. Проверьте, что у вас установлен Node и npm, для этого пропишите команды:**
+
+**`npm -v` - Проверка модуля** <br>
+**`node -v` - Проверка уставленого node** <br>
+
+**2. Установите зависимости для проекта прописав команду:**
+
+`npm install` алтернативный вариант `npm i`
+
+**3. Перейдите по ссылке которую составил для вас проект.
+Для запуска запустите проект командой**
+
+`npm run dev`
+
+**Перейти надо по этой ссылке для этого зажать [CTRL + клик]**<br>
+![запуск проекта](https://i.imgur.com/DWQqPzd.png)
+
+## Сценарии использования данного метода стилизации
+
+1. **Глобальные стили**  
+   В файле `src/index.css` можно определить стили, применяемые ко всему приложению:
+   ```css
+   body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: #f5f5f5;
+   }
+   ```
+   Этот файл импортируется в `main.jsx`:
+   ```jsx
+   import './index.css';
+   ```
+
+2. **Локальные стили для компонентов**  
+   Для каждого компонента можно создать отдельный CSS-файл. Например, для `Button`:
+   - `src/components/Button.css`:
+     ```css
+     .btn {
+       background-color: blue;
+       color: white;
+       padding: 10px 20px;
+       border: none;
+       border-radius: 5px;
+       cursor: pointer;
+     }
+     ```
+   - `src/components/Button.jsx`:
+     ```jsx
+     import './Button.css';
+     
+     function Button({ text }) {
+       return <button className="btn">{text}</button>;
+     }
+     
+     export default Button;
+     ```
