@@ -1,15 +1,10 @@
-import Header from "./components/Header.jsx";
-import Footer from "./components/Footer.jsx";
-import PostList from "./components/PostList.jsx"
+import Dot from "./components/Dot";
+
 
 function App() {
   return (
     <>
-      <Header />
-      <main>
-        <PostList />
-      </main>
-      <Footer />
+      <Dot />
     </>
   );
 }
