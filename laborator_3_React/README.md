@@ -1,12 +1,44 @@
-# React + Vite
+## Запуск проекта:
+1. Клонируем репозитории (или качаем файлы)
+2. Проверяем, что установлена node 
+Для этого:
+`win + r` вводим `cmd`
+В командной строке вводим `node -v`
+3. Заходи в ваш IDE и в терминале устанавливаем зависимости
+для этого используем команду `npm i`
+4. Устанавливаем react-route - `npm i react-route`
+5. Запускаем проект - `npm run dev` (В package json можете сделать свою команду на запуск в `scripts`)
+## Контрольные вопросы:
+### 1. Как использовать useState для управления состоянием?
+Это хук в React, который позволяет мне добавлять состояние в функциональные компоненты.
+При изменении он ререндерит страницу, использовать так
+сначала указываем ему за чем следить, затем обновляем
+Пример:
+```jsx
+import {useState} from 'react'
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+export default function Example(){
+    const [count, setCount] = useState(0)
 
-Currently, two official plugins are available:
+    function handleClick(){
+        setCount(count + 1)
+    }
+    return (
+        <button onClick={handleClick}>{count}</button>
+    )
+}
+```
+В данно случае в кнопке будет меняться count при нажатии на нее, то есть она будет ререндериться
+### 2. Как работает useEffect?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Позволяет выполнять побочные эффекты в компонентах React (например, загрузка данных, подписки на события, таймеры и т.п.).
 
-## Expanding the ESLint configuration
+Он запускается после того, как компонент отрендерился.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+! Если в синтаксисе не указать [] в конце, он будет реагировать на все ререндеры компонентов, а с [] он отредериться только 1 раз.
+```
+
+### 3. С помощью какого метода можно рендерить списки элементов в React?
+
+При помощи массивов, и объекто, для это используем `array.map()` так он пройдет по всему массиву, и вернет нам его в виде ножно го списка (Например Ul -> li)
