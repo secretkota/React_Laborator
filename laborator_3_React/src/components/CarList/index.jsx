@@ -1,8 +1,11 @@
 import React from 'react'
 
-import cars from "../../cars.json"
+import { List, Item, Image, TextParking} from './CarList.styled'
+
+import cars from "../../assets/data/cars.json"
 import Modal from '../Modal';
-import { Btn } from '../Hero/Hero.styled';
+import bgImg from "../../assets/img/back_image.jpg"
+
 
 
 const CarList = () => {
@@ -15,32 +18,29 @@ const CarList = () => {
 
     }
 
-    const handleClose = () => { }
-
     return (
         <>
-            <div>
-                {cars.map((car, index) => (
-                    <div key={index} onClick={() => handleClick(car)}>
-                        <img src={car.image} alt="112" />
-                    </div>
+            <List bgImg={bgImg}>
+            <TextParking>Our Parking:</TextParking>
+            {cars.map((car, index) => (
+                    <Item key={index} onClick={() => handleClick(car)}>
+                        <Image src={car.image} alt="image none" />
+                    </Item>
                 ))}
+            </List>
 
-                {selectedCar && (
-                    <>
-                        <Modal
-                            isOpen={modalIsopen}
-                            onClose={() => setModalIsOpen(false)}
-                        >
+            {selectedCar && (
+                <>
+                    <Modal
+                        isOpen={modalIsopen}
+                        onClose={() => setModalIsOpen(false)}
+                    >
                             <h2>{selectedCar.name}</h2>
-                            <img src={selectedCar.image} alt="112" />
+                            <list><img src={selectedCar.image} alt="112" /></list>
                         </Modal>
                     </>
-                )
-                }
-            </div>
+                )}
         </>
-
     )
 }
 

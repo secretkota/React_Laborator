@@ -2,13 +2,12 @@ import { useEffect, useState } from 'react'
 import { Btn, Main, Subtitle, Title } from './Hero.styled'
 import heroBg from "../../assets/img/back_image.jpg"
 
-import data from './data'
-import Modal from '../Modal';
+import data from '../../assets/data/data'
+import { Link } from 'react-router';
 
 export default function Hero() {
     const [currentInfo, setCurrentInfo] = useState(0);
-    const [modalIsopen, setModalIsOpen] = useState(false)
-
+    
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrentInfo((prevInfo) => {
@@ -29,12 +28,6 @@ export default function Hero() {
                 <Title>{data[currentInfo].title}</Title>
                 <Subtitle>{data[currentInfo].subtitle}</Subtitle>
                 <Btn>{data[currentInfo].btnText}</Btn>
-
-                <Modal
-                    isOpen={modalIsopen}
-                    onClose={() => setModalIsOpen(false)}
-                >
-                </Modal>
             </Main>
         </>
     )
