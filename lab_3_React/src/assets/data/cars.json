@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Apex Thunderbolt",
+        "price": "$120,000",
+        "description": "A high-performance sports car with a sleek design and impressive acceleration.",
+        "image": "../src/assets/img/bmw_m5.jpeg",
+        "max_speed": 320,
+        "likes": 1532
+    },
+    {
+        "name": "Falcon Cruiser",
+        "price": "$75,000",
+        "description": "A comfortable and reliable SUV, perfect for family trips and off-road adventures.",
+        "image": "../src/assets/img/dodge.jpg",
+        "max_speed": 210,
+        "likes": 847
+    },
+    {
+        "name": "Vortex Phantom",
+        "price": "$250,000",
+        "description": "An exotic supercar with cutting-edge technology and jaw-dropping speed.",
+        "image": "../src/assets/img/renault.jpg",
+        "max_speed": 360,
+        "likes": 2310
+    },
+    {
+        "name": "Orion EcoDrive",
+        "price": "$35,000",
+        "description": "An eco-friendly electric vehicle with a modern design and efficient performance.",
+        "image": "../src/assets/img/toyota_auris.jpg",
+        "max_speed": 180,
+        "likes": 654
+    },
+    {
+        "name": "Titan Hauler",
+        "price": "$90,000",
+        "description": "A powerful pickup truck designed for heavy-duty tasks and rugged terrain.",
+        "image": "../src/assets/img/volvo.jpg",
+        "max_speed": 200,
+        "likes": 1230
+    }
+]
