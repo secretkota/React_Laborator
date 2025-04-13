@@ -13,6 +13,7 @@ export default function Header () {
             <NavList>
                 <Link to="/"><button>Main</button></Link>
                 <Link to="/carList"><button>Car List</button></Link>
+                <Link to="/carForm"><button>Add Car</button></Link>
             </NavList>
             <a href="/"><LoginBtn>Login</LoginBtn></a>
         </HeaderElement>

@@ -4,6 +4,7 @@ export const List = styled.div`
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url(${(props) => props.bgImg});
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;

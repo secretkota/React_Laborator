@@ -6,6 +6,7 @@ import { List, Item, Image, TextParking } from './CarList.styled'
 import Modal from '../Modal';
 import bgImg from "../../assets/img/back_image.jpg"
 import { useNavigate } from 'react-router';
+import LoadingSpinner from '../../assets/img/loader.svg';
 
 const CarList = () => {
     const navigate = useNavigate()
@@ -16,10 +17,21 @@ const CarList = () => {
     const [selectedCar, setSelectedCar] = React.useState(null)
     const [modalIsOpen, setModalIsOpen] = React.useState(false)
 
+    /**
+   * Открывает модальное окно с подробной информацией о выбранной машине.
+   * 
+   * @param {Object} car - Объект машины, на которую кликнули.
+   */
+
     const handleClick = (cars) => {
         setModalIsOpen(true)
         setSelectedCar(cars)
     }
+
+  /**
+   * Получает список машин с сервера при монтировании компонента.
+   * Устанавливает состояние загрузки и обрабатывает возможные ошибки.
+   */
 
     useEffect(() => {
         setLoading(true);
@@ -49,7 +61,7 @@ const CarList = () => {
                         <Image src={car.image} alt="image none" />
                     </Item>
                 ))} */}
-                {loading && <p>Loading...</p>}
+                {loading && <img src={LoadingSpinner} alt="Loading..." />}
                 {!loading && cars.map((data, index) => (
                     <Item key={index} onClick={() => handleClick(cars[index])}>
                         <Image src={data.image} alt="image none" />

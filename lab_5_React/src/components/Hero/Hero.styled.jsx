@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Main = styled.main`
   width: 100vw;
-  height: 678px;
+  height: 676px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)), url(${(props) => props.bgImg});
   background-repeat: no-repeat;
   background-size: cover;
