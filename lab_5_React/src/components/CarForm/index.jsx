@@ -49,13 +49,13 @@ export default function CarForm() {
           {errors.price && <ErrorText>Это поле обязательно</ErrorText>}
 
           <LabelText htmlFor="description">Описание</LabelText>
-          <Textareatext id="description" {...register("description", { required: true })}></Textareatext>
-          {errors.description && <ErrorText>Это поле обязательно</ErrorText>}
+          <Textareatext id="description" {...register("description", { required: true, minLength: 10, maxLength: 256 })}></Textareatext>
+          {errors.description && <ErrorText>Минимально: 10 символов, Максимально 256 символов</ErrorText>}
 
           <LabelText htmlFor="image">Изображение</LabelText>
           <p>URL</p>
-          <Inputtext type="text" id="image" {...register("image", { required: true })} />
-          {errors.image && <ErrorText>Это поле обязательно</ErrorText>}
+          <Inputtext type="text" id="image" {...register("image", { required: true, pattern: /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/gi })} />
+          {errors.image && <ErrorText>Вставьте ссылку на фотографию автомобиля</ErrorText>}
 
           <LabelText htmlFor="max_speed">Максимальная скорость</LabelText>
           <Inputtext type="number" id="max_speed" maxLength={3}
@@ -77,3 +77,6 @@ export default function CarForm() {
     </>
   )
 }
+
+
+

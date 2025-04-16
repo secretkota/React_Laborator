@@ -128,7 +128,10 @@ const CarList = () => {
                     </ul>
                     </Modaltext>
                     {showDeleteBTN && (
-                        <ButtonDel onClick={() => handleClickDelete(id)}>Delete</ButtonDel>
+                        <ButtonDel onClick={() =>{
+                        handleClickDelete(id)
+                        setShowDeleteBTN(false) 
+                        }}>Delete</ButtonDel>
                     )}
                     <ButtonEdit onClick={() => {
                         navigate(`/carList/${selectedCar.id}`)
