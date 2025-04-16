@@ -22,7 +22,7 @@ export default function Modal({ isOpen, onClose, children }) {
             <Content>
               {children}
               <CloseBtn onClick={onClose}>
-                <img src={closeBtn} alt="Close" />
+                <img src={closeBtn} alt="Close"/>
               </CloseBtn>
             </Content>
           </Wrapper>
