@@ -10,9 +10,6 @@ export default {
     createCar: async (car) => {
         return (await api.post("/cars", car)).data
     },
-    updateCar: async (car) => {
-        return (await api.put(`/cars/${car.id}`, car)).data
-    },
     deleteCar: async (id) => {
         return (await api.delete(`/cars/${id}`)).data
     },

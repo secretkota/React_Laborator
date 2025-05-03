@@ -14,11 +14,11 @@ function App() {
     <>
       <GlobalStyle />
       <Routes>
-          <Route element={<MainLayout />}>
-          <Route index path="/" element={<MainPage />}/>
-          <Route path="/carList" element={<CarSelectPage />}/>
+        <Route element={<MainLayout />}>
+          <Route index path="/" element={<MainPage />} />
+          <Route path="/carList" element={<CarSelectPage />} />
           <Route path="/carForm" element={<CarFormPage />} />
-          <Route path="/carList/:id?" element={<CarSelectPage />}/>
+          <Route path="/carList/:id?" element={<CarSelectPage />} />
           <Route path="*" element={<PageError />} />
         </Route>
       </Routes>

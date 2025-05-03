@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router';
-import api from '../../assets/api/cars';
+import api from '../../api/cars';
 import { List, Item, Image, TextParking, ImageModal, Modaltext, ButtonDel, ButtonEdit, FavoriteSection, FavoriteTitle, FavoriteList, FavoriteItem } from './CarList.styled'
 
 import Modal from '../Modal';
